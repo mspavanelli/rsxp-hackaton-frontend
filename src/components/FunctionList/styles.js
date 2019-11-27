@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.aside`
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   height: 100vh;
+  overflow-y: scroll;
   width: 400px;
-  z-index: -1;
 
   h2 {
     margin: 50px auto;
@@ -14,4 +13,8 @@ export const Container = styled.aside`
   ul {
     border-top: 1px solid rgba(112, 112, 112, 0.129);
   }
+`;
+
+export const Category = styled.div`
+  border: 1px solid red;
 `;

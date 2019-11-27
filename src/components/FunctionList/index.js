@@ -1,22 +1,76 @@
 import React, { useState, useEffect } from "react";
 
-import { Container } from "./styles";
+import { Container, Category } from "./styles";
 
 const FunctionList = () => {
-  const [functions, setFunctions] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    setFunctions(["matemática", "física"]);
+    setCategories([
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Matemática",
+        functions: ["A", "B"]
+      },
+      {
+        name: "Física",
+        functions: ["C", "D"]
+      }
+    ]);
   }, []);
 
   return (
     <Container>
       <h2>Funções</h2>
-      <ul>
-        {functions.map((functionCategory, index) => (
-          <li key={index}>{functionCategory}</li>
-        ))}
-      </ul>
+      {categories.map((category, index) => (
+        <Category>
+          {category.name}
+          <ul>
+            {category.functions.map((func, index) => (
+              <li key={index}>{func}</li>
+            ))}
+          </ul>
+        </Category>
+      ))}
     </Container>
   );
 };
