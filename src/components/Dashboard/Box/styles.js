@@ -27,3 +27,22 @@ export const Description = styled.h4`
     font-size: 0.8em;
   }
 `;
+
+export const Inputs = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Input = styled.div`
+  display: flex;
+
+  input {
+    border: none;
+    background-color: #f4f5fd;
+    padding: 5px;
+    margin-top: 10px;
+
+    & + input {
+    }
+  }
+`;

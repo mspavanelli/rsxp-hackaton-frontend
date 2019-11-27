@@ -62,7 +62,7 @@ const FunctionList = () => {
     <Container>
       <h2>Funções</h2>
       {categories.map((category, index) => (
-        <Category>
+        <Category key={index}>
           {category.name}
           <ul>
             {category.functions.map((func, index) => (
